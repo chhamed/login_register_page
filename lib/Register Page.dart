@@ -16,6 +16,7 @@ class _RegisterState extends State<Register> {
   TextEditingController pass = TextEditingController(text: "");
   TextEditingController conf_pass = TextEditingController(text: "");
   bool PV = true;
+  bool PV2 = true;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
@@ -221,10 +222,10 @@ class _RegisterState extends State<Register> {
                         hintText: ' Confirm Password',
                         suffixIcon: IconButton(
                           icon: Icon(
-                              !PV ? Icons.visibility : Icons.visibility_off),
+                              !PV2 ? Icons.visibility : Icons.visibility_off),
                           onPressed: () {
                             setState(() {
-                              PV = !PV;
+                              PV2 = !PV2;
                             });
                           },
                         )),
